@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+    <head> 
+        <title> Aqua mind</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">"
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "sans-serif";
+}
+
+nav { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%); 
+            padding: 15px 25px; 
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2); 
+            margin-bottom: 30px; 
+        }
+
+        .nav-links { 
+            display: flex; 
+            gap: 15px; 
+        }
+
+        /* Styling for individual menu items (the anchor tags acting as buttons) */
+        nav a.menu-item {
+            text-decoration: none;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            /* Adds padding inside the link to make it clickable and look like a button */
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav a.menu-item:hover, nav a.menu-item.active { 
+            background-color: rgba(255, 255, 255, 0.2); 
+            color: white; 
+        }
+
+        .logo-image {
+            height: 70px; /* Restricts height to fit nicely in the nav */
+            width: auto;  /* Maintains the correct aspect ratio */
+            display: block; /* Removes extra space below the image */
+        }
+        
+        /* Media Query: Rules inside here apply only when screen width is 768px or less (Tablets/Phones) */
+        @media (max-width: 768px) {
+            nav { 
+                /* Changes flex direction to column so logo sits on top of links */
+                flex-direction: column;
+                gap: 15px; 
+            }
+            .nav-links { 
+                /* Makes the links container take full width */
+                width: 100%;
+                justify-content: center; 
+            }
+        }
+.item1{
+   background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%); 
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+}
+.jana{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:0%;
+}
+.jana ul{
+    display:flex;
+    list-style:none;
+    justify-content: space-between;
+}
+.jana ul li{
+    display:flex;
+    margin:20px;
+}
+.jana ul li a{
+    color:white;
+    text-decoration: none;
+}
+.smart{
+    background-color: #1d56d1;
+    background-repeat: no-repeat;
+}
+
+.h3{
+    display: flex;
+    margin:20px;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    justify-content: flex-start;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+.line{
+    display:flex;
+    justify-content: space-between;
+     align-items: center;
+    padding: 0px 5%;
+}
+.none{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    gap: 10px;              
+    padding: 40px 5%;
+    flex-direction: row;
+}
+.none img{
+     width: 86%;
+    height: auto;
+}
+.same{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 45%;
+    font-style: poppins;
+}
+#product{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;  
+}
+.card{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 260px;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+.card::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;   
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card h5{
+    margin-top: 10px;
+    font-size: 16px;
+}
+.cooding{
+ background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%); 
+    padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+     display: flex;
+    justify-content: space-between;  
+    padding-left: 5%;
+    align-items:center;
+    justify-items: center;
+    gap:10px;
+}
+.nothing{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 15px;
+    width: calc(50% - 15px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.nothing:hover{
+    transform: translateY(-5px);
+}
+.nothing img{
+    border-radius: 10px;
+}
+.value{
+    background-color:#f3f4f6;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+.order-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.order-btn {
+    background-color: #1d56d1;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #1546b3; 
+    transform: scale(1.05);
+}
+.sana{
+    color:white;
+    display:flex;
+    align-items: flex-start;
+    margin-right: 800px;
+}
+.someting{
+    display:flex;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 10px 5%;
+ margin: 40px;
+}
+.water{
+    display:flex;
+    flex-direction: column;
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 15px;
+    width: calc(30% - 15px);
+}
+.water i{
+    font-size:40px;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+.feature-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.feature-title i{
+    font-size:28px;
+    color:#2563eb;
+}
+        </style>
+    </head>
+    <body> 
+<nav> 
+        <a href="Hpme.html" class="nav-logo"> 
+            <img src="white_icon.png" alt="AquaMind Icon" class="logo-image">
+        </a> 
+        <h3 class="sana"> AquaMind</h3>
+        <div class="nav-links"> 
+            <a href="#" class="menu-item active">Home</a> 
+            <a href="#" class="menu-item">Contact us</a> 
+            <a href="#" class="menu-item">About us</a> 
+            <a href="#" class="menu-item ">sign up</a>
+        </div> 
+    </nav>
+        <div class="line">
+        <div class="none">
+        <img src="Aqua mind photo.jpeg" alt="product photo" width="500" height="500">
+        </div>
+        <div class="same">
+        <h1 id="title1" style=" font-weight: bold; font-size: 40px;" > Smart Water</h1>
+        <h1 id="title2" style=" font-weight: bold; font-size:40px;"> Mangement </h1>
+        <h4 id="title3"style="font-size: meduim; font-size:15px;"> Optimize usage, Detect leaks </h4>
+        <h4 id="title4" style="font-size: medium; font-size:15px;">,and Save resources </h4>
+                 <h4 class="sam"style="font-size: medium; font-size:20px"> " Technology that listens to your pipes "</h4>
+        </div>
+        </div>
+      <div class="someting">
+
+    <div class="water">
+        <div class="feature-title">
+            <i class="fa-solid fa-gears"></i>
+            <h3>Automatic Control</h3>
+        </div>
+        <h5>Automatically regulate water flow and pressure</h5>
+    </div>
+
+    <div class="water">
+        <div class="feature-title">
+            <i class="fa-solid fa-bell"></i>
+            <h3 style="color:#1546b3">Instant Alerts</h3>
+        </div>
+        <h5>Receive real-time notifications about water usage and potential issues</h5>
+    </div>
+
+    <div class="water">
+        <div class="feature-title">
+            <i class="fa-solid fa-droplet"></i>
+            <h3>Resource Saving</h3>
+        </div>
+        <h5>Optimizes water usage and reduces unnecessary consumption to protect resources</h5>
+    </div>
+
+</div>
+        <div class="move">
+    <div class="item1">
+        <h3 style="color: #f3f4f6; font-family: Poppins"> PRODUCT COMPONENTS </h3>
+        </div>
+        <div id="product">
+
+    <div class="card">
+        <img src="download.jpg" alt="flow sensor">
+        <h5>Water Flow Sensor YF-S201</h5>
+    </div>
+
+    <div class="card">
+        <img src="solinoid valve.jpg" alt="Solenoid valve">
+        <h5>Solenoid valve</h5>
+    </div>
+
+    <div class="card">
+        <img src="lcd.jpg" alt="Lcd screen with i2c">
+        <h5>LCD Screen with I2C</h5>
+    </div>
+
+    <div class="card">
+        <img src="EP32.jpg" alt="ESP32 with Touch Screen">
+        <h5>ESP32 with Touch Screen</h5>
+    </div>
+
+    <div class="card">
+        <img src="solar panels.jpg" alt="Solar Panels">
+        <h5>Solar Panels</h5>
+    </div>
+
+    <div class="card">
+        <img src="soolar controller.jpg" alt="Solar controller">
+        <h5>Solar Controller</h5>
+    </div>
+
+    <div class="card">
+        <img src="battery.jpg" alt="battery">
+        <h5>Battery</h5>
+    </div>
+    <div class="card">
+        <img src="buck.jpg" alt="bunck" width="200" height="200">
+        <h5>Buck Converter LM2596</h5>
+    </div>
+    <div class="card">
+        <img src="channel relay.jpg" alt="channel relay" width="200" height="200">
+        <h5>Channel Relay</h5>
+    </div>
+    <div class="card">
+        <img src="ultrasonic.jpg" alt="Ultrasonic" width="200" height="200">
+        <h5> Ultrasonic sensor</h5>
+    </div>
+    <div class="card">
+        <img src="soil sensor.jpg" alt="soil sensor" width="200" height="200">
+        <h5> Soil Sensor</h5>
+    </div>
+    <div class="card">
+        <img src="buzzer sensor.jpg" alt="buzzer" width="200" height="200">
+        <h5> Buzzer </h5>
+    </div>
+    <div class="card">
+        <img src="fuse.jpg" alt="fuse" height="200" width="200">
+        <h5> Fuse </h5>
+    </div>
+    <div class="card">
+        <img src="diode.jpg" alt="diode" height="200" width="200">
+        <h5> Diode </h5>
+    </div>
+    <div class="card">
+        <img src="Switch.jpg" alt=" switch" height="200" width="200">
+        <h5> Rocker Switch</h5>
+    </div>
+</div>
+        <div class="cooding">
+            <h3 style="color: #f3f4f6; font-family: Poppins"> HOW IT WORKS </h3>
+        </div>
+       <div class="value">
+        <div class="nothing">
+            <img src="download.jpg" alt="flow sensor" width="200" height="200">
+            <div class="hope">
+            <h3>   Water flow Sensor </h3>
+            <h5>measure the water flow rate in the system </h5>
+            <h5> and helps ensure proper and continuous water circulation.</h5>
+            </div>
+            </div>
+            <div class="nothing">
+                <img src="solar panels.jpg" alt="solar panel" width="200" height="200">
+                <div class="hope">
+                    <h3>   Solar Panels </h3>
+                    <h5>convert sunlight into electricity to power the system.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="soolar controller.jpg" alt="solar controller" width="200" height="200">
+                <div class="hope">
+                    <h3>   Solar Controller </h3>
+                    <h5>Regulates charging from the solar panel and protects the battery from overcharging or deep discharge.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="battery.jpg" alt="battery" width="200" height="200">
+                <div class="hope">
+                    <h3> Battery </h3>
+                    <h5>Stores electrical energy so the system can work at night or without sunlight</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="buck.jpg" alt="buck" width="200" height="200">
+                <div class="hope">
+                    <h3> Buck Converter LM2596 </h3>
+                    <h5>Steps down voltage to power low-voltage components in the system.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="EP32.jpg" alt="Ep32" width="200" height="200">
+                <div class="hope">
+                    <h3> ESP32 Development Board </h3>
+                    <h5>Controls the system and manages communication between components.</h5>
+                </div>
+                </div>
+            <div class="nothing">
+                <img src="lcd.jpg" alt="lcd" width="200" height="200">
+                <div class="hope">
+                    <h3>  LCD 16x2 with I2C </h3>
+                    <h5>Displays system information and status to the user.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="solinoid valve.jpg" alt="solenoid valve" width="200" height="200">
+                <div class="hope">
+                    <h3> Solenoid Valve </h3>
+                    <h5>Electrically controlled valve that opens or closes to control water flow.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="channel relay.jpg" alt="channel relay" width="200" height="200">
+                <div class="hope">
+                    <h3> channel relay</h3>
+                    <h5>Acts as a switch controlled by the ESP32 to turn high-power devices (like the valve) on or off</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="ultrasonic.jpg" alt="ultrasonic" width="200" height="200">
+                <div class="hope">
+                    <h3> Ultrasonic Sensor </h3>
+                    <h5>Measures water level in the tank.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="soil sensor.jpg" alt="soil sensor" width="200" height="200">
+                <div class="hope">
+                    <h3> Soil Moisture Sensor </h3>
+                    <h5>Detects soil moisture levels to determine watering needs.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="buzzer sensor.jpg" alt="buzzer sensor" width="200" height="200">
+                <div class="hope">
+                    <h3> Buzzer Sensor </h3>
+                    <h5>Provides audible alerts for system status or errors.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="fuse.jpg" alt="fuse" width="200" height="200">
+                <div class="hope">
+                    <h3> Fuse </h3>
+                    <h5>Protects the system from electrical overloads.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="diode.jpg" alt="diode" width="200" height="200">
+                <div class="hope">
+                    <h3> Diode </h3>
+                    <h5>Prevents backflow of current in the circuit.</h5>
+                </div>
+            </div>
+            <div class="nothing">
+                <img src="Switch.jpg" alt="switch" width="200" height="200">
+                <div class="hope">
+                    <h3> Switch </h3>
+                    <h5>Manually controls the power supply to the system.</h5>
+                </div>
+            </div>
+            <div class="order-container">
+    <button class="order-btn">Order Now</button>
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</body>
+</html>
